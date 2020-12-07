@@ -1,6 +1,7 @@
 import os 
 os.system("sudo apt-get install figlet")
 os.system("figlet Wep!-!Cracker ")
+print(" Coded by Arda6 Github .")
 wireless_cart = str(input("Wireless Cart - Example wlan0 : "))
 os.system("sudo airmon-ng start " + wireless_cart + "")
 os.system("sudo airodump-ng " + wireless_cart + "")
